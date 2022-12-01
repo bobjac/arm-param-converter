@@ -1,12 +1,336 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "siteName": {
-			"value": "GEN-UNIQUE"
+        "resourceGroupLocation": {
+            "value": "eastus"
         },
-        "storageAccountName": {
-            "value": "GEN-UNIQUE"
+        "resourceGroupName": {
+            "value": "neu-ai-dip-marketplace-test-rg"
+        },
+        "projectDetailprefix": {
+            "value": "neu"
+        },
+        "machineLearningName": {
+            "value": "neu-dip-075-mlworkspace"
+        },
+        "machineLearningCompute": {
+            "value": "mlcomp"
+        },
+        "projectDetailenvironment": {
+            "value": "075"
+        },
+        "appInsightsName": {
+            "value": "neu-dip-075-insights"
+        },
+        "appInsightsLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "keyVaultName": {
+            "value": "neu-dip-075-keyvault"
+        },
+        "keyVaultLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "keyVaultSku": {
+            "value": "standard"
+        },
+        "mlStorageAccountName": {
+            "value": "neudip075mlst"
+        },
+        "mlStorageAccountSku": {
+            "value": "Standard_LRS"
+        },
+        "mlStorageLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "trainingStorageName": {
+            "value": "neudip075trainst"
+        },
+        "trainingStorageSku": {
+            "value": "Standard_LRS"
+        },
+        "trainingStorageLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "processingStorageName": {
+            "value": "neudip075processst"
+        },
+        "processingStorageSku": {
+            "value": "Standard_LRS"
+        },
+        "processingStorageLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "publishedStorageName": {
+            "value": "neudip075publishst"
+        },
+        "publishedStorageSku": {
+            "value": "Standard_LRS"
+        },
+        "publishedStorageLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "cosmosDBName": {
+            "value": "neu-dip-075-cos"
+        },
+        "cosmosDBLocation": {
+            "value": "southcentralus"
+        },
+        "cosmosDBLocationName": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "webAppServicePlanName": {
+            "value": "neu-dip-075-web-asp"
+        },
+        "webAppLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "webAppName": {
+            "value": "neu-dip-075-web"
+        },
+        "computerVisionName": {
+            "value": "neu-dip-075-cv"
+        },
+        "computerVisionLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "formRecognizerName": {
+            "value": "neu-dip-075-fr"
+        },
+        "formRecognizerLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "luisAuthoringName": {
+            "value": "neu-dip-075-luis-authoring"
+        },
+        "luisPredictionName": {
+            "value": "neu-dip-075-luis"
+        },
+        "luisLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "luisLocationAuthoring": {
+            "value": "westus"
+        },
+        "signalRName": {
+            "value": "neu-dip-075-signalr"
+        },
+        "signalRLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "orchestrationFunctionAppName": {
+            "value": "neu-dip-075-orch"
+        },
+        "orchestrationHostingPlanName": {
+            "value": "neu-dip-075-orch-asp"
+        },
+        "orchestrationFunctionAppLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "modulesFunctionAppName": {
+            "value": "neu-dip-075-modules"
+        },
+        "modulesHostingPlanName": {
+            "value": "neu-dip-075-modules-asp"
+        },
+        "modulesFunctionAppLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "customMLHostingPlanName": {
+            "value": "neu-dip-075-customml-asp"
+        },
+        "customMLFunctionAppLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "customMLFunctionAppName": {
+            "value": "neu-dip-075-customml"
+        },
+        "containerRegistryName": {
+            "value": "neudip075registry"
+        },
+        "containerRegistryLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "machineLearningComputeLocation": {
+            "value": "SOUTH CENTRAL US"
+        },
+        "projectDetailproject": {
+            "value": "dip"
+        },
+        "nestedTemplatesFolder": {
+            "value": "."
+        },
+        "sourceContainerUserName": {
+            "value": "neudip"
+        },
+        "sourceContainerPassword": {
+            "value": "y=tZqWeRFaAT9d5jpA7tnFnH/lAmIyzi"
+        },
+        "appInsightsTemplateFileName": {
+            "value": "AppInsights.Template.json"
+        },
+        "keyVaultTemplateFileName": {
+            "value": "KeyVault.Template.json"
+        },
+        "resourecGroupType": {
+            "value": "rg"
+        },
+        "appServicePlanType": {
+            "value": "asp"
+        },
+        "functionAppType": {
+            "value": "func"
+        },
+        "webAppType": {
+            "value": "web"
+        },
+        "storageAccountType": {
+            "value": "st"
+        },
+        "appInsightsType": {
+            "value": "ins"
+        },
+        "cosmosDBType": {
+            "value": "cos"
+        },
+        "keyVaultType": {
+            "value": "key"
+        },
+        "cogService": {
+            "value": "cog"
+        },
+        "signalR": {
+            "value": "sigr"
+        },
+        "containerRegistry": {
+            "value": "containerregistry"
+        },
+        "storageTemplateFileName": {
+            "value": "Storage.Template.json"
+        },
+        "storageParametersFileNameTraining": {
+            "value": "Storage.Training.Parameters.json"
+        },
+        "storageBlobContainerTemplateFileName": {
+            "value": "Storage.BlobContainer.Template.json"
+        },
+        "storageParametersFileNameProcessing": {
+            "value": "Storage.Processing.Parameters.json"
+        },
+        "storageParametersFileNameProcessingPublished": {
+            "value": "Storage.Processing.Published.Parameters.json"
+        },
+        "storageQueueTemplateFileName": {
+            "value": "Storage.Queue.Template.json"
+        },
+        "cosmosDBTemplateFileName": {
+            "value": "CosmosDB.Template.json"
+        },
+        "cosmosDBSQLDBTemplateFileName": {
+            "value": "CosmosDB.SQLDB.Template.json"
+        },
+        "cosmosDBSQLDBContainerTemplateFileName": {
+            "value": "CosmosDB.SQLDB.Container.Template.json"
+        },
+        "cosmosDBSQLDBContainerUDFTemplateFileName": {
+            "value": "CosmosDB.SQLDB.Container.UDF.Template.json"
+        },
+        "appServicePlanTemplateFileName": {
+            "value": "AppServicePlan.Template.json"
+        },
+        "webAppTemplateFileName": {
+            "value": "WebApp.Template.json"
+        },
+        "zipDeployTemplateFileName": {
+            "value": "ZipDeploy.Template.json"
+        },
+        "cognitiveServiceTemplateFileName": {
+            "value": "CogService.Template.json"
+        },
+        "customVisionAuthoringName": {
+            "value": ""
+        },
+        "customVisionPredictionName": {
+            "value": ""
+        },
+        "customVisionLocation": {
+            "value": ""
+        },
+        "signalRTemplateFileName": {
+            "value": "SignalR.Template.json"
+        },
+        "machineLearningTemplateFileName": {
+            "value": "MachineLearning.Template.json"
+        },
+        "machineLearningComputeTemplateFileName": {
+            "value": "MachineLearning.Compute.Template.json"
+        },
+        "functionAppTemplateFileName": {
+            "value": "FunctionApp.Template.json"
+        },
+        "functionAppConfigTemplateFileName": {
+            "value": "FunctionApp.Config.Template.json"
+        },
+        "keyVaultAccessPolicyFileName": {
+            "value": "KeyVault.AccessPolicy.Template.json"
+        },
+        "keyVaultCurrentUserAccessPolicyFileName": {
+            "value": "KeyVault.AccessPolicy.CurrentUser.Template.json"
+        },
+        "keyVaultSecretTemplateFileName": {
+            "value": "KeyVault.Secret.Template.json"
+        },
+        "functionAppContainerTemplateFileName": {
+            "value": "FunctionApp.Container.Template.json"
+        },
+        "customMLFunctionAppTemplateFileName": {
+            "value": "CustomMLFunctionApp.Settings.Template.json"
+        },
+        "containerRegistryTemplateFileName": {
+            "value": "ContainerRegistry.Template.json"
+        },
+        "orchestrationFunctionAppSettingsTemplateFileName": {
+            "value": "OrchestrationFunctionApp.Settings.Template.json"
+        },
+        "modulesFunctionAppSettingsTemplateFileName": {
+            "value": "ModulesFunctionApp.Settings.Template.json"
+        },
+        "webAppSettingsTemplateFileName": {
+            "value": "WebApp.Settings.Template.json"
+        },
+        "jitAccessPolicyTEMP": {
+            "value": {}
+        },
+        "deploymentUserObjectId": {
+            "value": ""
+        },
+        "deploymentAssetPath": {
+            "value": "assets"
+        },
+        "deploymentTemplatePath": {
+            "value": "templates"
+        },
+        "deploymentAssetModulesFileName": {
+            "value": "modules.zip"
+        },
+        "deploymentAssetWebAppFileName": {
+            "value": "web.zip"
+        },
+        "deploymentAssetOrchFileName": {
+            "value": "orch.zip"
+        },
+        "deploymentAssetVersionNumber": {
+            "value": "1-7-4"
+        },
+        "ownerRoleId": {
+            "value": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
+        },
+        "_artifactsLocation": { 
+            "value": "https://neudipdevdeployment.blob.core.windows.net/packages/1-7-4/"
+        },
+        "_artifactsLocationSasToken": { 
+            "value": "?sp=r&st=2022-06-22T22:16:18Z&se=2032-06-23T06:16:18Z&spr=https&sv=2021-06-08&sr=c&sig=KLB%2FQ1OHNX6gMeSq1jPiIWMLDcTiUf5tv2820UONCmU%3D"
         }
     }
 }
