@@ -1,0 +1,24 @@
+{
+  "id": "/subscriptions/2e467bcc-ec84-4430-a27f-beac4ec94251/resourceGroups/DIP/providers/Microsoft.Resources/deployments/bobjac_test1/operations/624A7757305DD657",
+  "operationId": "624A7757305DD657",
+  "properties": {
+    "provisioningOperation": "Create",
+    "provisioningState": "Failed",
+    "timestamp": "2022-12-05T03:50:17.546Z",
+    "duration": "PT0.0700047S",
+    "statusCode": "InternalServerError",
+    "statusMessage": {
+      "status": "Failed",
+      "error": {
+        "code": "ResourceDeploymentFailure",
+        "message": "Encountered internal server error. Diagnostic information: timestamp '20221205T035017Z', subscription id '2e467bcc-ec84-4430-a27f-beac4ec94251', tracking id '1f3764e8-98f0-4e33-af1b-d1cc413e959a', request correlation id 'd804766d-fc9a-4ee5-8fde-247e2af14fde'."
+      }
+    },
+    "targetResource": {
+      "id": "/subscriptions/2e467bcc-ec84-4430-a27f-beac4ec94251/resourceGroups/DIP/providers/Microsoft.Resources/deployments/KVSCustomVistionKeyTraining",
+      "resourceName": "KVSCustomVistionKeyTraining",
+      "resourceType": "Microsoft.Resources/deployments"
+    },
+    "trackingId": "1f3764e8-98f0-4e33-af1b-d1cc413e959a"
+  }
+}
