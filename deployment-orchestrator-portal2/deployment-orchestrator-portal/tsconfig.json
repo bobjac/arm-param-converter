@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "es6",
+    "pretty": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react",
+    "baseUrl": "./src",
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/**"
+    ],
+    "paths": {
+      "@do_portal/view-models/*":["view-models/*"],
+      "@do_portal/constants/*":["constants/*"],
+      "@do_portal/components/*":["components/*"],
+      "@do_portal/pages/*":["pages/*"],
+      "@do_portal/assets/styles/*":["assets/styles/*"],
+      "@do_portal/assets/img/*":["assets/img/*"],
+      "@do_portal/lib/*":["lib/*"],
+      "@do_api/src/*":["../deployment-orchestrator/src/*"]
+    },
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dev_server.js",
+    "dist",
+    "build"
+  ]
+}
