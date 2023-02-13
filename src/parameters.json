@@ -1,168 +1,367 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resourceGroupLocation": {
-            "value": "eastus"
+      "baseResourceName": {
+        "value": "GEN-UNIQUE-156"
+      },
+      "dipAppSettingName": {
+        "value": "GEN_UNIQUE_165"
+      },
+      "resourceGroupLocation": {
+        "value": "eastus"
+      },
+      "resourceGroupName": {
+        "value": "DIP"
+      },
+      "projectDetailprefix": {
+        "value": "neu"
+      },
+      
+      "machineLearningComputeLocation": {
+        "value": "SOUTH CENTRAL US"
+      },
+      "alwaysOn": {
+        "value": true
+      },
+      "linuxFxVersion": {
+        "value": "NODE|14-lts"
+      },
+      "_orchWebArtifactsLocation": { 
+          "value": "https://bobjacdip.blob.core.windows.net/packages/"
+      },
+      "_orchWebArtifactsLocationSasToken": { 
+          "value": "?sp=racwdli&st=2022-12-21T21:39:37Z&se=2023-03-10T05:39:37Z&sip=0.0.0.0-255.255.255.255&sv=2021-06-08&sr=c&sig=%2BeJf9TmqQsKAFdUJLDSqm%2BcyBpgk%2BAGz74OOhG%2BaB70%3D"
+      },
+      "DEPLOYMENT_ORCHESTRATOR_CLIENT_ID": {
+        "value": "0aa2975a-1ca3-403a-81b7-b5bcc5385626"
+      },
+      "DEPLOYMENT_ORCHESTRATOR_CLIENT_SECRET": {
+        "value": "THy8Q~HrqRFxYNcw107As1pvxCwvbmiT04P-layn"
+      },
+      "DEPLOYMENT_ORCHESTRATOR_TENANT_ID": {
+        "value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+      },
+      "DEPLOYMENT_ORCHESTRATOR_SUBSCRIPTION_ID": {
+        "value": "2e467bcc-ec84-4430-a27f-beac4ec94251"
+      },
+      "DEPLOYMENT_RESOURCE_GROUP": {
+        "value": "DIP"
+      },
+      "DEPLOYMENT_NAME": {
+        "value": "bobjac_test1"
+      },
+      "DEPLOYMENT_ORCHESTRATOR_STORAGE_URL": {
+        "value": "DefaultEndpointsProtocol=https;AccountName=bobjacdip;AccountKey=kzeiLIljR+b6Ho1/A65F0Wsq3Xw/v69S5yOen9fFwN4IL8MM2oaGbH3jqZP56KSRPbCUjA84lQhu+AStslKrZg==;EndpointSuffix=core.windows.net"
+      },
+      "DEPLOY_ON_INIT": {
+        "value": "true"
+      },
+      "DEPLOY_LOGGING_ENABLED": {
+        "value": "true"
+      },
+      "privateEndpointTemplateFileName": {
+        "value": "PrivateEndpoint.Template.json"
+      },
+      "vnetIntegrationTemplateFileName": {
+        "value": "AppVNetIntegration.Template.json"
+      },
+      "newOrExistingNSG": {
+        "value": "new"
+      },
+      "sharedNSGName": {
+        "value": "placeholder"
+      },
+      "sharedNSGLocation": {
+        "value": "eastus2"
+      },
+      "newOrExistingVNet": {
+        "value": "new"
+      },
+      "vNetName": {
+          "value": "vnet-bj72-riskrighter-ue2-l"
+      },
+      "vNetResourceGroupName": {
+        "value": "rg-bj72-dip-ue2-l"
         },
-        "resourceGroupName": {
-            "value": "neu-ai-dip-marketplace-test-rg"
+        "vNetLocation": {
+            "value": "eastus2"
         },
-        "projectDetailprefix": {
-            "value": "neu"
+        "vNetAddressPrefix": {
+            "value": "10.73.8.0/23"
+        },
+        "mgmtSubnet": {
+            "value": "sbnt-bj72-mgmt-ue2-l"
+        },
+        "mgmtSubnetPrefix": {
+            "value": "10.73.8.0/27"
+        },
+        "applicationSubnet": {
+            "value": "sbnt-bj72-app-ue2-l"
+        },
+        "applicationSubnetPrefix": {
+            "value": "10.73.8.32/27"
+        },
+        "databaseSubnet": {
+            "value": "sbnt-bj72-data-ue2-l"
+        },
+        "databaseSubnetPrefix": {
+            "value": "10.73.8.64/26"
+        },
+        "appSvcSearchSubnet": {
+            "value": "sbnt-bj72-appsvcsearch-ue2-l"
+        },
+        "appSvcSearchSubnetPrefix": {
+            "value": "10.73.8.160/27"
+        },
+        "funcSearchSubnet": {
+            "value": "sbnt-bj72-funcsearch-ue2-l"
+        },
+        "funcSearchSubnetPrefix": {
+            "value": "10.73.9.32/27"
+        },
+        "funcClassSubnet": {
+            "value": "sbnt-bj72-funcclass-ue2-l"
+        },
+        "funcClassSubnetPrefix": {
+            "value": "10.73.9.0/27"
+        },
+        "funcOrcSubnet": {
+            "value": "sbnt-bj72-funcorchst-ue2-l"
+        },
+        "funcOrcSubnetPrefix": {
+            "value": "10.73.8.224/27"
+        },
+        "funcModSubnet": {
+            "value": "sbnt-bj72-funcmodules-ue2-l"
+        },
+        "funcModSubnetPrefix": {
+            "value": "10.73.8.192/27"
+        },
+        "appSvcApiSubnet": {
+            "value": "sbnt-bj72-appsvcapi-ue2-l"
+        },
+        "appSvcApiSubnetPrefix": {
+            "value": "10.73.8.128/27"
+        },
+        "storageSubnet": {
+            "value": "sbnt-bj72-storage-ue2-l"
+        },
+        "storageSubnetPrefix": {
+            "value": "10.73.9.64/26"
+        },
+        "machineLearningWorkspaceSubnet": {
+            "value": "sbnt-bj72-mlw-ue2-l"
+        },
+        "machineLearningWorkspaceSubnetPrefix": {
+            "value": "10.73.9.128/26"
+        },
+        "cognitiveSubnet": {
+            "value": "sbnt-bj72-cog-ue2-l"
+        },
+        "cognitiveSubnetPrefix": {
+            "value": "10.73.9.192/26"
         },
         "machineLearningName": {
-            "value": "neu-dip-075-mlworkspace"
+            "value": "mlwkspc-bj72-riskrighter-ue2-l"
         },
         "machineLearningCompute": {
             "value": "mlcomp"
         },
         "projectDetailenvironment": {
-            "value": "075"
+            "value": "l"
         },
         "appInsightsName": {
-            "value": "neu-dip-075-insights"
+            "value": "appins-bj72-rr-ue2-l"
         },
         "appInsightsLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "keyVaultName": {
-            "value": "neu-dip-075-keyvault"
+            "value": "kv-bj72-rr-ue2-l"
         },
         "keyVaultLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "keyVaultSku": {
             "value": "standard"
         },
+        "searchStorageAccountName": {
+            "value": "stgbj72searchue2l"
+        },
+        "searchStorageAccountSku": {
+            "value": "Standard_LRS"
+        },
+        "searchStorageLocation": {
+            "value": "East US 2"
+        },
         "mlStorageAccountName": {
-            "value": "neudip075mlst"
+            "value": "stgbj72mlue2l"
         },
         "mlStorageAccountSku": {
             "value": "Standard_LRS"
         },
         "mlStorageLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "trainingStorageName": {
-            "value": "neudip075trainst"
+            "value": "stgbj72trainue2l"
         },
         "trainingStorageSku": {
             "value": "Standard_LRS"
         },
         "trainingStorageLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "processingStorageName": {
-            "value": "neudip075processst"
+            "value": "stgbj72processue2l"
         },
         "processingStorageSku": {
             "value": "Standard_LRS"
         },
         "processingStorageLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "publishedStorageName": {
-            "value": "neudip075publishst"
+            "value": "stgbj72publishue2l"
         },
         "publishedStorageSku": {
             "value": "Standard_LRS"
         },
         "publishedStorageLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
+        },
+        "sqlServerName": {
+            "value": "ss-bj72-rr-ue2-l"
+        },
+        "sqlServerLocation": {
+            "value": "eastus2"
         },
         "cosmosDBName": {
-            "value": "neu-dip-075-cos"
+            "value": "cdb-bj72-rr-ue2-l"
         },
         "cosmosDBLocation": {
-            "value": "southcentralus"
+            "value": "eastus2"
         },
         "cosmosDBLocationName": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "webAppServicePlanName": {
-            "value": "neu-dip-075-web-asp"
+            "value": "appsvcplan-bj72-web-ue2-l"
         },
         "webAppLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "eastus2"
         },
         "webAppName": {
-            "value": "neu-dip-075-web"
+            "value": "appsvc-bj72-web-ue2-l"
+        },
+        "webAppSearchServicePlanName": {
+            "value": "appsvcplan-bj72-search-ue2-l"
+        },
+        "webAppSearchLocation": {
+            "value": "eastus2"
+        },
+        "webAppSearchName": {
+            "value": "appsvc-bj72-search-ue2-l"
+        },
+        "cognitiveServicesName": {
+            "value": "cog-bj72-rr-ue2-l"
+        },
+        "cognitiveServicesLocation": {
+            "value": "East US 2"
+        },
+        "languageServiceName": {
+            "value": "cog-bj72-language-ue2-l"
+        },
+        "languageServiceLocation": {
+            "value": "East US 2"
         },
         "computerVisionName": {
-            "value": "neu-dip-075-cv"
+            "value": "cog-bj72-cv-ue2-l"
         },
         "computerVisionLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
+        },
+        "searchServiceName": {
+            "value": "cog-bj72-search-ue2-l"
+        },
+        "searchServiceLocation": {
+            "value": "East US 2"
         },
         "formRecognizerName": {
-            "value": "neu-dip-075-fr"
+            "value": "cog-bj72-fr-uc-l"
         },
         "formRecognizerLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "Central US"
         },
         "luisAuthoringName": {
-            "value": "neu-dip-075-luis-authoring"
+            "value": "cog-bj72-luisauth-uw-l"
         },
         "luisPredictionName": {
-            "value": "neu-dip-075-luis"
+            "value": "cog-bj72-luispred-ue2-l"
         },
         "luisLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "luisLocationAuthoring": {
             "value": "westus"
         },
         "signalRName": {
-            "value": "neu-dip-075-signalr"
+            "value": "sgr-bj72-rr-ue2-l"
         },
         "signalRLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "orchestrationFunctionAppName": {
-            "value": "neu-dip-075-orch"
+            "value": "fun-bj72-orc-ue2-l"
         },
         "orchestrationHostingPlanName": {
-            "value": "neu-dip-075-orch-asp"
+            "value": "funplan-bj72-orc-ue2-l"
         },
         "orchestrationFunctionAppLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "eastus2"
         },
         "modulesFunctionAppName": {
-            "value": "neu-dip-075-modules"
+            "value": "fun-bj72-mod-ue2-l"
         },
         "modulesHostingPlanName": {
-            "value": "neu-dip-075-modules-asp"
+            "value": "funplan-bj72-mod-ue2-l"
         },
         "modulesFunctionAppLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "eastus2"
+        },
+        "modulesSearchFunctionAppName": {
+            "value": "fun-bj72-search-ue2-l"
+        },
+        "modulesSearchHostingPlanName": {
+            "value": "funplan-bj72-search-ue2-l"
+        },
+        "modulesSearchFunctionAppLocation": {
+            "value": "eastus2"
         },
         "customMLHostingPlanName": {
-            "value": "neu-dip-075-customml-asp"
+            "value": "funplan-bj72-textclass-ue2-l"
         },
         "customMLFunctionAppLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "eastus2"
         },
         "customMLFunctionAppName": {
-            "value": "neu-dip-075-customml"
+            "value": "fun-bj72-textclass-ue2-l"
         },
         "containerRegistryName": {
-            "value": "neudip075registry"
+            "value": "acrbj72rrue2l"
         },
         "containerRegistryLocation": {
-            "value": "SOUTH CENTRAL US"
-        },
-        "machineLearningComputeLocation": {
-            "value": "SOUTH CENTRAL US"
+            "value": "East US 2"
         },
         "projectDetailproject": {
-            "value": "dip"
+            "value": "riskrighter"
         },
         "nestedTemplatesFolder": {
             "value": "."
         },
         "sourceContainerUserName": {
-            "value": "neudip"
+            "value": "riskrighterdip"
         },
         "sourceContainerPassword": {
             "value": "y=tZqWeRFaAT9d5jpA7tnFnH/lAmIyzi"
@@ -209,6 +408,9 @@
         "storageTemplateFileName": {
             "value": "Storage.Template.json"
         },
+        "dataLakeTemplateFileName": {
+            "value": "DataLake.Template.json"
+        },
         "storageParametersFileNameTraining": {
             "value": "Storage.Training.Parameters.json"
         },
@@ -247,6 +449,12 @@
         },
         "cognitiveServiceTemplateFileName": {
             "value": "CogService.Template.json"
+        },
+        "searchServiceTemplateFileName": {
+            "value": "SearchService.Template.json"
+        },
+        "LanguageServiceTemplateFileName": {
+            "value": "LanguageService.Template.json"
         },
         "customVisionAuthoringName": {
             "value": ""
@@ -303,7 +511,7 @@
             "value": {}
         },
         "deploymentUserObjectId": {
-            "value": ""
+            "value": "3e0387c0-f5e3-454a-b398-cf7931999060"
         },
         "deploymentAssetPath": {
             "value": "assets"
@@ -312,25 +520,31 @@
             "value": "templates"
         },
         "deploymentAssetModulesFileName": {
-            "value": "modules.zip"
+            "value": "Modules.zip"
+        },
+        "deploymentAssetModulesCognitiveFileName": {
+            "value": "ModulesCognitive.zip"
         },
         "deploymentAssetWebAppFileName": {
-            "value": "web.zip"
+            "value": "Web.zip"
+        },
+        "deploymentAssetWebAppsearchFileName": {
+            "value": "Search.zip"
         },
         "deploymentAssetOrchFileName": {
-            "value": "orch.zip"
+            "value": "Orch.zip"
         },
         "deploymentAssetVersionNumber": {
-            "value": "1-7-4"
+            "value": "1-7-0"
         },
         "ownerRoleId": {
             "value": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
         },
-        "_artifactsLocation": { 
-            "value": "https://neudipdevdeployment.blob.core.windows.net/packages/1-7-4/"
+        "_artifactsLocation": {
+            "value": "https://bobjacdips.blob.core.windows.net/packages/"
         },
-        "_artifactsLocationSasToken": { 
-            "value": "?sp=r&st=2022-06-22T22:16:18Z&se=2032-06-23T06:16:18Z&spr=https&sv=2021-06-08&sr=c&sig=KLB%2FQ1OHNX6gMeSq1jPiIWMLDcTiUf5tv2820UONCmU%3D"
+        "_artifactsLocationSasToken": {
+            "value": "?si=owner&sv=2021-06-08&sr=c&sig=UGb4tizoAPIK5vKrMmDpcFQeSdiuvqLsKSiJQF1kdSA%3D"
         }
     }
-}
+  }
